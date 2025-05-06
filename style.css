@@ -1,0 +1,65 @@
+body {
+    font-family: "Nico Moji";
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 50px;
+  }
+  
+  .container {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slot {
+    font-size: 48px;
+    margin: 30px;
+    padding: 20px;
+    border: double 4px  #ffffff;
+    border-radius: 10px;
+    width: 500px;
+    margin: 0 auto 20px;
+    background-color: #ffc1cc;
+  }
+  
+  
+  .start-button {
+    font-size: 18px;
+    display: inline-block;
+    background: #ffffff;
+    color: #cc99ff;
+    width: 150px;
+    height: 150px;
+    border: double 4px #cc99ff;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+  
+  .stop-button {
+    font-size: 18px;
+    display: inline-block;
+    background: #ffffff;
+    color: #bce2e8;
+    width: 150px;
+    height: 150px;
+    border: double 4px #bce2e8;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #2e7d32;
+  }
+  
