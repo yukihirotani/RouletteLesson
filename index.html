@@ -6,17 +6,15 @@
     <title>Roulette</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <div class="container">
-        <div class="slot" id="slot">---</div>
-        <div class="buttons">
-        <button class="start-button" onclick="startSlot()">すたーと</button>
-        <button class="stop-button" onclick="stopSlot()">すとっぷ</button>
-        </div>
-        <button class="back-button" onclick="backpageSlot()">りすと</button>
+    <div class="loading-screen">
+        <img id="upaa" src="upaa1.png" alt="ウパー">
+        <div id="loading-text" class="loading-text"></div>
     </div>
     <script src="main.js"></script>
 </body>

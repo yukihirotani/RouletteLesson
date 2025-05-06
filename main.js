@@ -1,57 +1,24 @@
-let places = [];
-let currentIndex = 0;
-let spinning = false;
-let spinTimeout = null;
-let currentSpeed = 100;
+// ウパーの歩行アニメーション
+const upaa = document.getElementById("upaa");
+const images = ["upaa1.png", "upaa2.png", "upaa3.png"];
+let imgIndex = 0;
 
-//APIよりデータを取得する
-async function fetchData() {
-  try {
-    const response = await fetch(
-      "https://apex.oracle.com/pls/apex/gamelive/places/hol/"
-    );
-    const data = await response.json();
-    places = data.items.map((item) => item.type_name);
-    console.log(places);
-  } catch (error) {
-    console.error("エラー:", error);
+setInterval(() => {
+  imgIndex = (imgIndex + 1) % images.length;
+  upaa.src = images[imgIndex];
+}, 300);
+
+// Now Loading テキストアニメーション
+const textElement = document.getElementById("loading-text");
+const loadingText = "Now Loading...";
+let textIndex = 0;
+
+function showNextChar() {
+  if (textIndex < loadingText.length) {
+    textElement.textContent += loadingText[textIndex];
+    textIndex++;
+    setTimeout(showNextChar, 150);
   }
 }
 
-fetchData();
-
-// スロットを回す
-function spin() {
-  document.getElementById("slot").textContent = places[currentIndex];
-  currentIndex = (currentIndex + 1) % places.length;
-
-  spinTimeout = setTimeout(spin, currentSpeed);
-}
-
-// スタートボタンが押されたとき
-function startSlot() {
-  if (spinning) return;
-
-  spinning = true;
-  currentSpeed = 100;
-  spin();
-}
-
-// ストップボタンが押されたとき
-function stopSlot() {
-  if (!spinning) return;
-
-  let slowdownInterval = setInterval(() => {
-    currentSpeed += 100;
-
-    if (currentSpeed >= 800) {
-      clearInterval(slowdownInterval);
-      clearTimeout(spinTimeout);
-      spinning = false;
-    }
-  }, 300);
-}
-
-function backpageSlot() {
-  window.location.href = "list.html"; // index.html に遷移
-}
+showNextChar();
