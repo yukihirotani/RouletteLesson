@@ -7,67 +7,52 @@ body {
   }
   
   .container {
-    background: white;
+    background: #ffc1cc;
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .slot {
-    font-size: 48px;
-    margin: 30px;
-    padding: 20px;
     border: double 4px  #ffffff;
-    border-radius: 10px;
-    width: 500px;
+    width: 600px;
     margin: 0 auto 20px;
-    background-color: #ffc1cc;
+  }
+  .h1{
+    text-align: center;
   }
   
-  
+  #place-list{
+    color:black;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+  }
   .start-button {
     font-size: 18px;
     display: inline-block;
     background: #ffffff;
     color: #cc99ff;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     border: double 4px #cc99ff;
-    border-radius: 50%;
+    border-radius: 10%;
     text-align: center;
     overflow: hidden;
     cursor: pointer;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 20px
   }
-  
-  .stop-button {
+
+  .make-button{
     font-size: 18px;
     display: inline-block;
     background: #ffffff;
-    color: #bce2e8;
-    width: 150px;
-    height: 150px;
-    border: double 4px #bce2e8;
-    border-radius: 50%;
+    color: #71c460;
+    width: 200px;
+    height: 100px;
+    border: double 4px #acff99;
+    border-radius: 10%;
     text-align: center;
     overflow: hidden;
     cursor: pointer;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 20px
   }
-
-.back-button{
-  font-size: 12px;
-  display: inline-block;
-  background: #ffffff;
-  color: #bce8d3;
-  width: 150px;
-  height: 40px;
-  border: double 4px #bce8cb;
-  border-radius: 10%;
-  text-align: center;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 70px;
-}

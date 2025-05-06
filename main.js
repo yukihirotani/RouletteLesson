@@ -51,3 +51,7 @@ function stopSlot() {
     }
   }, 300);
 }
+
+function backpageSlot() {
+  window.location.href = "list.html"; // index.html に遷移
+}
