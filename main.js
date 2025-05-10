@@ -18,6 +18,12 @@ function showNextChar() {
     textElement.textContent += loadingText[textIndex];
     textIndex++;
     setTimeout(showNextChar, 150);
+  } else {
+    setTimeout(() => {
+      textElement.textContent = "";
+      textIndex = 0;
+      showNextChar();
+    }, 1000);
   }
 }
 
